@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Aldo Rodriguez" description="About Aldo Rodriguez">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Sobre mi"
+				tagline="Gracias por pasar."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.webp"
+					alt="Aldo Rodriguez at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Con más de 8 años de experiencia como Desarrollador Web Full Stack y UX/UI Product Designer, 
+						e colaborado con empresas destacadas y proyectos innovadores, tanto de forma remota como presencial. 
+						Mi carrera se ha centrado en diseñar, desarrollar e implementar soluciones tecnológicas escalables y 
+						personalizadas para mejorar la eficiencia y productividad de las empresas. Vivo en Veracruz, México, 
+						donde he trabajado con algunas de las organizaciones más importantes de la región, combinando mis habilidades 
+						técnicas con un enfoque en el diseño centrado en el usuario.
+					</p>
+					<br>
+					<h4>Colaboraciones como Freelancer</h4>
+					<br>
+					<p>
+					A lo largo de mi carrera, he tenido el privilegio de colaborar como freelancer con diversas empresas importantes en Veracruz, 
+					proporcionando soluciones tecnológicas de alto impacto. Mi experiencia en Tiburones Rojos de Veracruz, donde trabajé como Web Master, 
+					fue una oportunidad clave para optimizar y administrar la plataforma oficial del club, logrando una mejora en la interacción y experiencia de los aficionados a través del portal web. 
+					Este trabajo fue un ejemplo claro de cómo puedo combinar la gestión de proyectos tecnológicos con una comprensión profunda de las necesidades del cliente y del usuario final.
+					</p>
+					<br>
+					<p>
+						En proyectos más recientes, he trabajado con empresas como Sinergia Corporativa y Peek Softworks, donde he implementado mejoras tecnológicas significativas que han ayudado a estas empresas 
+						a optimizar sus procesos y mejorar su presencia digital. Estas colaboraciones incluyen desde el desarrollo de aplicaciones y plataformas hasta el diseño de interfaces atractivas y 
+						funcionales que responden a las necesidades de negocio.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>Ingeniero en Sistema - Instituto Tecnologico de Veracruz.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<h5>Mi Metodología: Design Thinking y Desarrollo Centrado en el Usuario</h5>
+					<br>
+					<p>
+					A lo largo de mi carrera, he integrado la metodología Design Thinking en mi proceso de desarrollo y diseño de productos digitales. 
+					Esto me permite recopilar y analizar datos de usuario para crear soluciones que no solo cumplen con los objetivos empresariales, 
+					sino que también mejoran la experiencia del usuario. A través de herramientas como Figma y AdobeXD, desarrollo prototipos interactivos 
+					que luego pruebo y optimizo con la retroalimentación del cliente.
+					<br><br>
+
+					Mis capacidades como Product Designer me permiten trabajar en proyectos desde su concepción hasta su implementación final, asegurándome de que las soluciones creadas sean escalables, eficientes y centradas en el usuario. He trabajado en proyectos con alto impacto tanto en entornos presenciales como remotos, adaptándome rápidamente a las necesidades del cliente y del equipo.
+					</p>
+					<p>officia unde omnis</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
