@@ -1,6 +1,6 @@
 ---
 title: Wizard Customer
-publishDate: 2023-12-01 00:00:00
+publishDate: 2020-12-01 00:00:00
 img: /assets/formulario.png
 img_alt: formulario para tu empresa
 description: |

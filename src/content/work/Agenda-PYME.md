@@ -1,6 +1,6 @@
 ---
 title: Agenda para Pyme
-publishDate: 2022-10-02 00:00:00
+publishDate: 2023-10-02 00:00:00
 img: /assets/agenda.png
 img_alt: Agenda para PYMES 
 description: |
